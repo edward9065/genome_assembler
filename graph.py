@@ -98,6 +98,13 @@ class Graph:
             for n2 in n2s:
                 if n2 not in other.edges[n1]:
                     return False
+
+        for n1, n2s in other.edges.items():
+            if n1 not in self.edges.keys():
+                return False
+            for n2 in n2s:
+                if n2 not in self.edges[n1]:
+                    return False
         return True
 
     def __str__(self):
