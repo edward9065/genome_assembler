@@ -46,6 +46,7 @@ class Graph:
                     if n2 not in self.nodes():
                         self.edges[n2] = {}
                     self.edges[n1][n2] = 1
+        print( self.edges)
 
     def nodes(self):
         '''Return a list of nodes in the graph.'''
